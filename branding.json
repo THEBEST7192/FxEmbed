@@ -1,0 +1,13 @@
+{
+  "zones": [
+    {
+      "name": "X Embed",
+      "default": true,
+      "domains": ["x.the-diddy.party"],
+      "provider": "twitter",
+      "favicon": "https://abs.twimg.com/favicons/twitter.2.ico",
+      "redirect": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      "color": "#6363ff"
+    }
+  ]
+}
