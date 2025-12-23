@@ -5,9 +5,23 @@ send_metrics = false
 
 [vars]
 STANDARD_DOMAIN_LIST = "x.the-diddy.party"
-HOST_URL = "https://x.the-diddy.party"
+STANDARD_BSKY_DOMAIN_LIST = "bsky.the-diddy.party"
+DIRECT_MEDIA_DOMAINS = "d.x.the-diddy.party"
+TEXT_ONLY_DOMAINS = "t.x.the-diddy.party"
+INSTANT_VIEW_DOMAINS = "i.x.the-diddy.party"
+GALLERY_DOMAINS = "g.x.the-diddy.party"
+FORCE_MOSAIC_DOMAINS = "m.x.the-diddy.party"
+OLD_EMBED_DOMAINS = "o.x.the-diddy.party"
+MOSAIC_DOMAIN_LIST = "mosaic.x.the-diddy.party"
+MOSAIC_BSKY_DOMAIN_LIST = ""
+GIF_TRANSCODE_DOMAIN_LIST = "gif.x.the-diddy.party"
+POLYGLOT_DOMAIN_LIST = "polyglot.x.the-diddy.party"
+POLYGLOT_ACCESS_TOKEN = ""
 API_HOST_LIST = "api.fxtwitter.com"
-IGNORE_DOMAIN_LIST = ""
+SENTRY_DSN = ""
+SENTRY_AUTH_TOKEN = ""
+SENTRY_ORG = ""
+SENTRY_PROJECT = ""
 
 [build]
 command = "npm run build"
