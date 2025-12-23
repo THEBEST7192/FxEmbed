@@ -7,6 +7,7 @@ send_metrics = false
 STANDARD_DOMAIN_LIST = "x.the-diddy.party"
 HOST_URL = "https://x.the-diddy.party"
 API_HOST_LIST = "x.the-diddy.party"
+IGNORE_DOMAIN_LIST = ""
 
 [build]
 command = "npm run build"
