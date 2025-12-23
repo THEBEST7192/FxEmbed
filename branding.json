@@ -1,7 +1,7 @@
 {
   "zones": [
     {
-      "name": "X Embed",
+      "name": "fx-embed",
       "default": true,
       "domains": ["x.the-diddy.party"],
       "provider": "twitter",
