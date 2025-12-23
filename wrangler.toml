@@ -6,7 +6,7 @@ send_metrics = false
 [vars]
 STANDARD_DOMAIN_LIST = "x.the-diddy.party"
 HOST_URL = "https://x.the-diddy.party"
-API_HOST_LIST = "x.the-diddy.party"
+API_HOST_LIST = "api.fxtwitter.com"
 IGNORE_DOMAIN_LIST = ""
 
 [build]
