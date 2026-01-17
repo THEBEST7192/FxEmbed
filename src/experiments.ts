@@ -50,7 +50,7 @@ const Experiments: { [key in Experiment]: ExperimentConfig } = {
   [Experiment.ACTIVITY_EMBED]: {
     name: 'Discord activity embed',
     description: 'Use activity embed for Discord',
-    percentage: 1
+    percentage: 0
   },
   [Experiment.USE_TRAFFIC_CONTROL]: {
     name: 'Enable Traffic Control',
