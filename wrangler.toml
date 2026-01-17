@@ -4,8 +4,8 @@ compatibility_date = "2024-11-14"
 send_metrics = false
 
 [vars]
-STANDARD_DOMAIN_LIST = "x.the-diddy.party"
-STANDARD_BSKY_DOMAIN_LIST = "bsky.the-diddy.party"
+# --- X / Twitter domains ---
+STANDARD_DOMAIN_LIST = "the-diddy.party"
 DIRECT_MEDIA_DOMAINS = "d.x.the-diddy.party"
 TEXT_ONLY_DOMAINS = "t.x.the-diddy.party"
 INSTANT_VIEW_DOMAINS = "i.x.the-diddy.party"
@@ -13,11 +13,15 @@ GALLERY_DOMAINS = "g.x.the-diddy.party"
 FORCE_MOSAIC_DOMAINS = "m.x.the-diddy.party"
 OLD_EMBED_DOMAINS = "o.x.the-diddy.party"
 MOSAIC_DOMAIN_LIST = "mosaic.x.the-diddy.party"
-MOSAIC_BSKY_DOMAIN_LIST = ""
 GIF_TRANSCODE_DOMAIN_LIST = "gif.x.the-diddy.party"
 POLYGLOT_DOMAIN_LIST = "polyglot.x.the-diddy.party"
+
+
+# --- API backend ---
+API_HOST_LIST = "the-diddy.party"
+
+# --- Optional services ---
 POLYGLOT_ACCESS_TOKEN = ""
-API_HOST_LIST = "api.fxtwitter.com"
 SENTRY_DSN = ""
 SENTRY_AUTH_TOKEN = ""
 SENTRY_ORG = ""
