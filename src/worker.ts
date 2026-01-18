@@ -38,7 +38,7 @@ export const app = new Hono<{
     } catch (_e) {
       return '/error';
     }
-    const baseHostName = url.hostname.split('.').slice(-2).join('.');
+    const baseHostName = url.hostname.split('.').slice(-3).join('.');
     let realm = 'twitter';
     /* Override if in API_HOST_LIST. Note that we have to check full hostname for this. */
     if (Constants.API_HOST_LIST.includes(url.hostname)) {

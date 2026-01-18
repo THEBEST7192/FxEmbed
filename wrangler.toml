@@ -5,7 +5,7 @@ send_metrics = false
 
 [vars]
 # --- X / Twitter domains ---
-STANDARD_DOMAIN_LIST = "the-diddy.party"
+STANDARD_DOMAIN_LIST = "x.the-diddy.party"
 DIRECT_MEDIA_DOMAINS = "d.x.the-diddy.party"
 TEXT_ONLY_DOMAINS = "t.x.the-diddy.party"
 INSTANT_VIEW_DOMAINS = "i.x.the-diddy.party"
@@ -18,7 +18,7 @@ POLYGLOT_DOMAIN_LIST = "polyglot.x.the-diddy.party"
 
 
 # --- API backend ---
-API_HOST_LIST = "the-diddy.party"
+API_HOST_LIST = "api.x.the-diddy.party"
 
 # --- Optional services ---
 POLYGLOT_ACCESS_TOKEN = ""

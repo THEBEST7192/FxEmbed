@@ -20,7 +20,7 @@ export const getBranding = (c: Context | Request): Branding => {
   try {
     const url = new URL(c instanceof Request ? c.url : c.req.url);
     // get domain name, without subdomains
-    const domain = url.hostname.split('.').slice(-2).join('.');
+    const domain = url.hostname.split('.').slice(-3).join('.');
     const branding = zones.find(zone => zone.domains.includes(domain)) ?? defaultBranding;
     if (url.searchParams.get('brandingName')) {
       branding.name = url.searchParams.get('brandingName') ?? branding.name;
