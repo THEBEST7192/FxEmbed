@@ -54,16 +54,6 @@ export const renderVideo = (
     instructions.siteName = `${getBranding(properties.context).name} - ${videoCounter}`;
   }
 
-  if (status.provider === 'twitter') {
-    instructions.authorText = (status as APITwitterStatus).translation?.text || text || '';
-  } else {
-    instructions.authorText = text || '';
-  }
-
-  if ((instructions.authorText ?? '').length < 40 && status.quote) {
-    instructions.authorText += `\n${handleQuote(status.quote)}`;
-  }
-
   let url = video.url;
 
   if (

@@ -522,7 +522,6 @@ export const handleStatus = async (
     }
     if (status.media?.external && !status.media.videos?.length) {
       const { external } = status.media;
-      authorText = newText || '';
       headers.push(
         `<meta property="twitter:player" content="${external.url}">`,
         `<meta property="twitter:player:width" content="${external.width}">`,
@@ -647,10 +646,10 @@ export const handleStatus = async (
 
   /* Push basic headers relating to author, Tweet text, and site name */
   if (!flags.gallery) {
-    headers.push(
-      `<meta property="og:title" content="${ogTitle}"/>`,
-      `<meta property="og:description" content="${text}"/>`
-    );
+    headers.push(`<meta property="og:title" content="${ogTitle}"/>`);
+    if (!useActivity) {
+      headers.push(`<meta property="og:description" content="${text}"/>`);
+    }
     if (!useActivity) {
       headers.push(`<meta property="og:site_name" content="${siteName}"/>`);
     } else {
