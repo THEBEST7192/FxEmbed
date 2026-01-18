@@ -312,8 +312,12 @@ export const handleStatus = async (
   /* At this point, we know we're going to have to create a
      regular embed because it's not an API or direct media request */
 
-  let authorText = getSocialProof(status) || Strings.DEFAULT_AUTHOR_TEXT;
-  const engagementText = authorText.replace(/ {4}/g, ' ');
+  const socialProof = getSocialProof(status) || Strings.DEFAULT_AUTHOR_TEXT;
+  let authorText = socialProof;
+  if (useActivity || status.embed_card === 'player' || (status.media?.all?.length ?? 0) > 0) {
+    authorText = `${status.author.name} (@${status.author.screen_name})`;
+  }
+  const engagementText = socialProof.replace(/ {4}/g, ' ');
   const originalSiteName = getBranding(c).name;
   let siteName = originalSiteName;
 
@@ -685,7 +689,7 @@ export const handleStatus = async (
     providerEngagementText = providerEngagementText.replace(/ {4}/g, '  ');
 
     /* Workaround to prevent us from accidentally doubling up the engagement text in both provider and author fields */
-    if (status.text.trim().length === 0) {
+    if (useActivity || providerEngagementText === authorText || status.text.trim().length === 0) {
       providerEngagementText = Strings.DEFAULT_AUTHOR_TEXT;
     }
 
