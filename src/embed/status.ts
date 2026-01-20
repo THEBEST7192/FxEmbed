@@ -314,7 +314,7 @@ export const handleStatus = async (
 
   const socialProof = getSocialProof(status) || Strings.DEFAULT_AUTHOR_TEXT;
   let authorText = socialProof;
-  if (useActivity || status.embed_card === 'player' || (status.media?.all?.length ?? 0) > 0) {
+  if (useActivity) {
     authorText = `${status.author.name} (@${status.author.screen_name})`;
   }
   const engagementText = socialProof.replace(/ {4}/g, ' ');
@@ -689,7 +689,7 @@ export const handleStatus = async (
     providerEngagementText = providerEngagementText.replace(/ {4}/g, '  ');
 
     /* Workaround to prevent us from accidentally doubling up the engagement text in both provider and author fields */
-    if (useActivity || providerEngagementText === authorText || status.text.trim().length === 0) {
+    if (useActivity || authorText.includes(providerEngagementText) || status.text.trim().length === 0) {
       providerEngagementText = Strings.DEFAULT_AUTHOR_TEXT;
     }
 

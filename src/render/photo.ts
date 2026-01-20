@@ -36,7 +36,7 @@ export const renderPhoto = (
       instructions.authorText = `${authorText}${authorText ? '   ―   ' : ''}${photoCounter}`;
     }
     const brandingName = getBranding(properties.context).name;
-    if (engagementText && !isTelegram && authorText !== engagementText) {
+    if (engagementText && !isTelegram && !authorText.includes(engagementText)) {
       instructions.siteName = `${brandingName} - ${engagementText} - ${photoCounter}`;
     } else {
       instructions.siteName = `${brandingName} - ${photoCounter}`;
